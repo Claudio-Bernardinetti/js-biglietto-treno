@@ -25,11 +25,13 @@ let calcTicketDiscount;
 
 if (userAge < 18) {
     calcTicketDiscount = calcTicketPrice - calcTicketPrice * .20;
-    console.log(calcTicketDiscount);
+    console.log(`Il costo del tuo biglietto e' di € ${calcTicketDiscount.toFixed(2)}`);
 } else if(userAge > 65) {
     calcTicketDiscount = calcTicketPrice - calcTicketPrice * .40;
-    console.log(calcTicketDiscount);
+    console.log(`Il costo del tuo biglietto e' di €${calcTicketDiscount.toFixed(2)}`);
 } else {
-    console.log(calcTicketPrice);
+    console.log(`Il costo del tuo biglietto e' di €${calcTicketPrice.toFixed(2)}`);
 }
 // L'output del prezzo finale va stampato in forma umana (ovvero con massimo due decimali, per indicare i centesimi sul prezzo)
+
+//console.log(calcTicketDiscount.toPrecision(3));

@@ -38,7 +38,7 @@ if (userAge < 18) {
     console.log(`Il costo del tuo biglietto e' di € ${calcTicketPrice.toFixed(2)}`);
     finalPriceElement.innerHTML = `Il costo del tuo biglietto e' di € ${calcTicketPrice.toFixed(2)}`;
 }
-// L'output del prezzo finale va stampato in forma umana (ovvero con massimo due decimali, per indicare i centesimi sul prezzo)
+//L'output del prezzo finale va stampato in forma umana (ovvero con massimo due decimali, per indicare i centesimi sul prezzo)
 
 
 

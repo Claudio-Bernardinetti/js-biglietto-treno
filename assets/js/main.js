@@ -21,17 +21,32 @@ const calcTicketPrice = userKm * 0.21;
 
 // Sconto del 20% per i minorenni - Sconto del 40% per gli over 65
 
+const finalPriceElement = document.getElementById('finalPrice');
 let calcTicketDiscount;
 
 if (userAge < 18) {
     calcTicketDiscount = calcTicketPrice - calcTicketPrice * .20;
     console.log(`Il costo del tuo biglietto e' di € ${calcTicketDiscount.toFixed(2)}`);
+    finalPriceElement.innerHTML = `Il costo del tuo biglietto e' di € ${calcTicketDiscount.toFixed(2)}`;
+
 } else if(userAge > 65) {
     calcTicketDiscount = calcTicketPrice - calcTicketPrice * .40;
-    console.log(`Il costo del tuo biglietto e' di €${calcTicketDiscount.toFixed(2)}`);
+    console.log(`Il costo del tuo biglietto e' di € ${calcTicketDiscount.toFixed(2)}`);
+    finalPriceElement.innerHTML = `Il costo del tuo biglietto e' di € ${calcTicketDiscount.toFixed(2)}`;
+
 } else {
-    console.log(`Il costo del tuo biglietto e' di €${calcTicketPrice.toFixed(2)}`);
+    console.log(`Il costo del tuo biglietto e' di € ${calcTicketPrice.toFixed(2)}`);
+    finalPriceElement.innerHTML = `Il costo del tuo biglietto e' di € ${calcTicketPrice.toFixed(2)}`;
 }
 // L'output del prezzo finale va stampato in forma umana (ovvero con massimo due decimali, per indicare i centesimi sul prezzo)
+
+
+
+
+
+
+
+
+
 
 //console.log(calcTicketDiscount.toPrecision(3));
